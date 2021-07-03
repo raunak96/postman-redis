@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import "tailwindcss/tailwind.css";
+import ResponseProvider from "../context/ResponseContext";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+	return (
+		<ResponseProvider>
+			<Component {...pageProps} />
+		</ResponseProvider>
+	);
 }
 
-export default MyApp
+export default MyApp;
